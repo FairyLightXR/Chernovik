@@ -8,10 +8,12 @@
         <SolidColorBrush x:Key="AdditionalBackground" Color="#FEA9AB"></SolidColorBrush>
         <SolidColorBrush x:Key="AttentionBackground" Color="#EAB14D"></SolidColorBrush>
 
+        
+
         <Style TargetType="TextBlock">
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="FontSize" Value="15"/>
             <Setter Property="Padding" Value="0,4"/>
             <Setter Property="FontFamily" Value="Segoe Print"/>
         </Style>

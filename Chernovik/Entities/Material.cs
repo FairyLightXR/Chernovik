@@ -32,7 +32,39 @@ namespace Chernovik.Entities
         public decimal Cost { get; set; }
         public string Image { get; set; }
         public int MaterialTypeID { get; set; }
-    
+
+        /// <summary>
+        /// Свойство вывода адреса картинки с учетом материалов без картинки
+        /// </summary>
+        public string CheckImage
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(Image))
+                    return null;
+                else
+                    return Image;
+            }
+        }
+
+        //public string Supplier
+        //{
+        //    get
+        //    {
+        //        string supplier = null;
+
+        //        foreach (var item in MaterialSupplier)
+        //        {
+        //            supplier += item.Supplier.Title + ", ";
+        //        }
+
+        //        if (supplier != null)
+        //            return supplier.Remove(supplier.Length - 2, 2);
+        //        else
+        //            return "Не имеются";
+        //    }
+        //}
+
         public virtual MaterialType MaterialType { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MaterialCountHistory> MaterialCountHistory { get; set; }
