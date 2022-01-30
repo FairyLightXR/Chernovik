@@ -6,7 +6,16 @@
         xmlns:local="clr-namespace:Chernovik"
         mc:Ignorable="d"
         Title="&quot;Черновик&quot;" Height="800" Width="1200" WindowStartupLocation="CenterScreen" MinHeight="600" MinWidth="800" Icon="/UI/Logos/Черновик.ico">
-    <Grid>
-        
+    <Grid Background="{StaticResource AttentionBackground}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Черновик" FontSize="40" FontWeight="DemiBold"/>
+        <Image Source="/UI/Logos/Черновик.png" Stretch="Uniform" Margin="5" HorizontalAlignment="Left"/>
+
+        <Frame Grid.Row="1" Background="{StaticResource BasicBackground}" x:Name="MainFrame" ContentRendered="MainFrame_ContentRendered" NavigationUIVisibility="Hidden"/>
+        <Button HorizontalAlignment="Right" Content="Назад" x:Name="BackBtn" Click="BackBtn_Click"/>
     </Grid>
 </Window>
